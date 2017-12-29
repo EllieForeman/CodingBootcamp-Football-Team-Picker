@@ -4,11 +4,6 @@ class PlayerListIem extends Component {
 
 	// this.removePlayer=this.removePlayer.bind(this);
 
-	
-	constructor(props) { 	
-		super(props);
-	}
-
 	removePlayer(id) {
 		this.props.removePlayer(id);
 	}
@@ -16,6 +11,7 @@ class PlayerListIem extends Component {
 	render() {
 		return (
 			<div className="playerWrapper">
+			{this.props.player.text}
 			<button className="removePlayer" onClick={(e)=> this.removePlayer(this.props.id)}>Remove</button>
 			</div>
 		)
