@@ -1,55 +1,35 @@
-import React, {Component} from 'react';
-import PlayerListItem from './PlayerListItem';
-import NameInput from '../Form/NameInput';
+import React from 'react';
+// import PlayerListItem from "../../containers/PlayerListItem"
+// import PlayerListItem from './PlayerListItem';
 
-class PlayerList extends Component {
+// players is a List, from state
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			players: [],
-			nextId: 1
-			}
 
-	this.addPlayer=this.addPlayer.bind(this);
-	this.removePlayer=this.removePlayer.bind(this);
 
-	}
 
-	addPlayer(playerName) {
-		let players=this.state.players.slice();//making a copy
-		players.push({id:this.state.nextId,text:playerName});
-		this.setState({
-			players: players,
-			nextId: ++this.state.nextId
-		});
-		console.log("Player added:", playerName);
-	}
+const PlayerList = ({players}) => (
+    <div>
+    {console.log(players)}
+        <ol>
+            { players.map((player, i) => (
+                <li key={i}>
+                 {player.get("playerName")}                     
+                </li>
+            ))}
+        </ol>
 
-  	removePlayer(id) {
-    	this.setState({
-        players: this.state.players.filter((player, index) => player.id !== id)
-      });
-  }
+         { players.size < 10 ? 
+        <p> add players </p>
+        :
+        <p> everyone's there </p>
+        }
 
-  	render() {
-	    return (
-	     	<div>
-			   	<h4>Your players</h4>
-			   	<NameInput playerName="" addPlayer={this.addPlayer}/>
-				<ul>
-					{this.state.players.map((player) => {
-						return <PlayerListItem 
-				key={ player.id}
-				player={ player}
-				id={ player.id} 
-				removePlayer={this.removePlayer}/>
-				})
-				}
-				</ul>
-	    	</div>
-	    );
- 	}
-}
+        <button
+        className="btn btn-warning"
+        onClick={() => this.shufflePlayers()}>
+        Make Teams
+        </button>
+    </div>
+);
 
 export default PlayerList;

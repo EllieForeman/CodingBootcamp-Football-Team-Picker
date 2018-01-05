@@ -1,21 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import PlayerInputArea from '../Form/PlayerInputArea'
 
-class PlayerListIem extends Component {
+const PlayerListItem = ({ player, onDelete }) => (
+          <li className="list-group-item" key={ player.get("id") }>
+            { player.get("name") }
+            <button onClick={ onDelete } className="btn btn-danger">x</button>
+          </li>
+);
 
-	// this.removePlayer=this.removePlayer.bind(this);
 
-	removePlayer(id) {
-		this.props.removePlayer(id);
-	}
-
-	render() {
-		return (
-			<div className="playerWrapper">
-			{this.props.player.text}
-			<button className="removePlayer" onClick={(e)=> this.removePlayer(this.props.id)}>Remove</button>
-			</div>
-		)
-	}
-}
-
-export default PlayerListIem;
+export default PlayerListItem;

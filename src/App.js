@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Instructions from './components/Instructions';
-import PlayerList from './components/PlayerList/PlayerList';
+import PlayerInputArea from './containers/PlayerInputArea';
+import PlayerList from './containers/PlayerList';
 
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
 	     	<div>
 		       	<Header />
 		       	<Instructions />
+			    <PlayerInputArea />
 			    <PlayerList />
 	    	</div>
 	    );
@@ -18,3 +20,4 @@ class App extends Component {
 }
 
 export default App;
+
