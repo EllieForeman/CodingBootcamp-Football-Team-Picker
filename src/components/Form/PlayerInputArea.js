@@ -5,28 +5,13 @@ import React, { Component } from "react";
 import Input from "./Input";
 import AddPlayerButton from './AddPlayerButton';
 
-//!!!note!! - bug 'cannot run .slice method of undefined' - so made this and used fields.map instead of .slice
-// const fields = [
-// 	{ name: "playerName",
-// 	label: "Enter Players",
-// 	value: "" },
-// ];
-
 class Form extends Component {
 //setting up initial state with constructor method
 	constructor(props) {
 		super(props);
 		this.state = {
-            // fields: fields.map( ({ name, label, value }) => { //The map() method creates a new array
-            //     return{
-            //             name: name,
-            //             label: label,
-            //             value: "",                
-            //     };
-            // }),
-            name: '',
+            shuffled: [],
         };
-//bind prevents value of 'this' getting lost
 		this.submit = this.submit.bind(this);
 		this.change = this.change.bind(this);
 	};
@@ -35,9 +20,6 @@ class Form extends Component {
 //Access the value of the <input> using the value property
 //using setState to update state
 	change(e, i) {
-		// let fields = this.state.fields.slice(); //slice() method returns a portion of an array into a new array 
-		// fields[i].value = e.target.value; //target property of event object
-		// this.setState({fields: fields});
 		this.setState({
 			name: e.target.value,
 		})

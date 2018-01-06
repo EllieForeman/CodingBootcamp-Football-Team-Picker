@@ -5,11 +5,19 @@ import React from 'react';
 // players is a List, from state
 
 
+// shufflePlayers(e) {
+//     this.props.onClick({
+//             playerName: this.state.name,
+//             });
+//             this.setState({
+//                 name: '',
+//             })
+//         }
+// }
 
 
 const PlayerList = ({players}) => (
     <div>
-    {console.log(players)}
         <ol>
             { players.map((player, i) => (
                 <li key={i}>
@@ -24,11 +32,6 @@ const PlayerList = ({players}) => (
         <p> everyone's there </p>
         }
 
-        <button
-        className="btn btn-warning"
-        onClick={() => this.shufflePlayers()}>
-        Make Teams
-        </button>
     </div>
 );
 

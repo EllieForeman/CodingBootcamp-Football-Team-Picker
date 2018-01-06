@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Instructions from './components/Instructions';
 import PlayerInputArea from './containers/PlayerInputArea';
 import PlayerList from './containers/PlayerList';
+import Teams from './containers/Teams';
+
 
 
 class App extends Component {
@@ -14,6 +16,7 @@ class App extends Component {
 		       	<Instructions />
 			    <PlayerInputArea />
 			    <PlayerList />
+			    <Teams />
 	    	</div>
 	    );
  	}

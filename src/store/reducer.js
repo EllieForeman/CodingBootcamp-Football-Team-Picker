@@ -1,5 +1,5 @@
 import { Map } from "immutable";
-// import shuffleFunction from "../components/shuffleFunction";
+// import { shuffleFunction } from "../components/shuffleFunction";
 
 const addPlayer = (state, { playerName, id }) => state.update("players", players => (
     players.push(Map({
