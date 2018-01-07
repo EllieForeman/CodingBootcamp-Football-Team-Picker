@@ -1,42 +1,25 @@
 import React from 'react';
-// import PlayerListItem from "../../containers/PlayerListItem"
-// import PlayerListItem from './PlayerListItem';
-
-// players is a List, from state
-
-
-// shufflePlayers(e) {
-//     this.props.onClick({
-//             playerName: this.state.name,
-//             });
-//             this.setState({
-//                 name: '',
-//             })
-//         }
-// }
-
 
 const PlayerList = ({players}) => (
-    <section className="player-list">
-    <div className="player-number-warning">
-         { players.size < 10 ? 
-        <p> add players </p>
-        :
-        <p> everyone's there </p>
-        }
-    </div>
+    <section className="playerList col-md-6">
+        <h3>Player List:</h3>
+        <div className="player-number-warning">
+            { players.size < 10 ? 
+            <p> ...you need to add 10 players </p>
+            :
+            <p> Nice! now make your teams! </p>
+            }
+        </div>
 
-    <div className="player-list-text">
-        <ol>
-            { players.map((player, i) => (
-                <li key={i}>
-                 {player.get("playerName")}                     
-                </li>
-            ))}
-        </ol>
-    </div>
-
-
+        <div className="playerListText">
+            <ol>
+                { players.map((player, i) => (
+                    <li key={i}>
+                        {player.get("playerName")}                     
+                    </li>
+                ))}
+            </ol>
+        </div>
     </section>
 );
 

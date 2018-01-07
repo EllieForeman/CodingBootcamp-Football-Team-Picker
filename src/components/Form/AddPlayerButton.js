@@ -1,13 +1,10 @@
 import React from "react";
 //functional component for addplayer button
-	const AddPlayerButton = ({ value, type, className }) => ( //properties of button 
+	const AddPlayerButton = ({ value, type, className, players }) => ( 
 	  	<div className="addPlayer">
-	    	<input className={ className } type={ type } value={ value }/>
+	    	<input className={ className } type={ type } value={ value } disabled={ players.count() >= 10 }  />
 	 	</div>
 	);
 
 export default AddPlayerButton;
-
-
-// Add later - disabling the button, maybe with a message? : disabled={ players.count() >= 10 }
 

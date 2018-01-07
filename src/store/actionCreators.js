@@ -6,10 +6,10 @@ export const addPlayer = ({ playerName, id }) => {
     };
 };
 
-export const removePlayer = (id) => {
-	return {
-    type: "REMOVE_PLAYER",
-    id: id,
-	};
-};
+// export const removePlayer = (id) => {
+// 	return {
+//     type: "REMOVE_PLAYER",
+//     id: id,
+// 	};
+// };
 

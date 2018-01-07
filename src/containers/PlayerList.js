@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'; //React and Redux are not intrinsically connected. Must use a seperate library, 'react-redux' to connect the two 
-//connect takes funtion and component and makes a container
 import PlayerList from '../components/PlayerList/PlayerList';
 import { addPlayer } from '../store/actionCreators';
 

@@ -4,8 +4,17 @@ html,
 body {
   color: #383127;
   background-color: #e4dbbf;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
-  /*add text shadow*/
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+ /* SETTING BACKGROUND COLOUR SCHEME OF SECTIONS */
+
+ /* wraps margin around everything but header and instructions */
+.bodyArea {
+ margin-left:7%;
+ margin-right:7%;
+ margin-top:3%;
+}
 
 .header {
   background-color:#70ab8f;
@@ -15,41 +24,132 @@ body {
 
 .instructions {
   background-color: #dc5b21;
-  padding:35px;
+  padding:12px;
+  font-weight: bolder;
+  font-size: 18px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 
 }
 
-.sidebar {
+.playerList {
+  height: 400px;
+}
+
+.centerText {
+text-align: center;
+padding-bottom:5%;
+padding-top:10px;
+font-size: 15px
+}
+
+.center {
+  text-align: center;
+  font-size: 15px
+
+}
+
+
+/*.sidebar {
   background-color:#70ab8f;
   padding: 30px;
   border: 2px solid black;
-}
-
-.player-list-text {
-    height: 200px;
-    font-weight: bold;
-
-}
-
-/*.player-list, .player-input-area, .instructions{
-    border: 2px solid black;
 }*/
 
- /* text */
 
-/*centering the name input and the add player button*/
-.search-bar, .addPlayer {
-  margin: 20px;
-  text-align: center;
+/*centering the name input and the add player button with bootstrap*/
+.form-group-inline {
+  display: inline-block;
 }
 
-.search-bar input {
-  width: 25%;
-  text-align: center;
-   border-radius: 5px;
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
+    padding: 10px;
 }
+
+.form-control-medium {
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.searchBar input {
+  text-align: center;
+  border-radius: 5px;
+  padding:10px;
+  margin-top: 20px
+
+}
+
+/*ADD PLAYER*/
 
 .addPlayerButton {
   background-color: #70ab8f;
-  padding: 15px;
+  border-radius: 5px;
+  padding: 7px;
+  text-align: center;
+  width:120px;
+  margin-left:25px;
 }
+
+ /*PLAYER LIST  */
+
+ li {
+  font-size: 20px;
+  font-weight: bolder;
+
+ }
+
+ /*  TEAMS SECTION  */
+
+.buttonWrapper {
+    text-align: center;
+}
+
+.makeTeamsButton {
+  background-color: #dc5b21;
+  border-radius: 5px;
+  padding: 7px;
+  width:200px;
+}
+
+.teamsSection {
+  display: flex;
+  justify-content: center;
+}
+
+.teamA, .teamB {
+padding-top: 1%;
+padding-right:10%;
+padding-left:10%;
+height:250px;
+
+}
+
+ul {
+   list-style-type: none;
+}
+
+/*FOOTER*/
+.footer {
+background-color:#383127;
+}
+.footerWrapper {
+  height:100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.footerButton {
+  background-color:#70ab8f;
+  border-radius: 5px;
+  margin:5px;
+}
+
+.footerText, .footerMadeBy, a, .footerButton {
+  color:#e4dbbf;
+  font-size: 15px;
+}
+

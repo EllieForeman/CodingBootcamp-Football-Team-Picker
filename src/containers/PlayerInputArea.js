@@ -1,7 +1,5 @@
 import { connect } from "react-redux";
 import PlayerInputArea from "../components/Form/PlayerInputArea";
-
-//action creator
 import { addPlayer } from "../store/actionCreators.js";
 
 const mapDispatchToProps = dispatch => {
