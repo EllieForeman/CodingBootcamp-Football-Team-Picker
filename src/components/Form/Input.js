@@ -2,7 +2,7 @@ import React from "react";
 
 // a simple Input component
 const Input = ({ value, name, label, onChange }) => (
-    <div>
+    <div className="search-bar">
         <label htmlFor={ name }>{ label }</label>
         <input type="text" placeholder="player name..." value={ value } id ={ name } onChange={ onChange } />
     </div>

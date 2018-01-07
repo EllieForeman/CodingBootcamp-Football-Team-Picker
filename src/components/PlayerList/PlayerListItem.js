@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PlayerInputArea from '../Form/PlayerInputArea'
 
 const PlayerListItem = ({ player, onDelete }) => (
-          <li className="list-group-item" key={ player.get("id") }>
+          <li className="player-list-text" key={ player.get("id") }>
             { player.get("name") }
             <button onClick={ onDelete } className="btn btn-danger">x</button>
           </li>

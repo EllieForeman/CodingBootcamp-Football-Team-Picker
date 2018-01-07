@@ -13,9 +13,3 @@ export const removePlayer = (id) => {
 	};
 };
 
-// export const shufflePlayers = () => {
-// 	return {
-//     type: "SHUFFFLE_PLAYERS",
-//     teams: teams,
-// 	};
-// };

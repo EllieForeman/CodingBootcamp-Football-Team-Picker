@@ -17,7 +17,16 @@ import React from 'react';
 
 
 const PlayerList = ({players}) => (
-    <div>
+    <section className="player-list">
+    <div className="player-number-warning">
+         { players.size < 10 ? 
+        <p> add players </p>
+        :
+        <p> everyone's there </p>
+        }
+    </div>
+
+    <div className="player-list-text">
         <ol>
             { players.map((player, i) => (
                 <li key={i}>
@@ -25,14 +34,10 @@ const PlayerList = ({players}) => (
                 </li>
             ))}
         </ol>
-
-         { players.size < 10 ? 
-        <p> add players </p>
-        :
-        <p> everyone's there </p>
-        }
-
     </div>
+
+
+    </section>
 );
 
 export default PlayerList;

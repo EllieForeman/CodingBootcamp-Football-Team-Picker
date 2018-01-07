@@ -58,8 +58,8 @@ class Teams extends Component {
 	);
 
 	    return (	
-			    <div>
-					{ players.count() == 10 ?
+			    <section className="teams-section">
+					{ players.count() === 10 ?
 						<div>
 							<button
 					        className="btn btn-warning"
@@ -75,7 +75,7 @@ class Teams extends Component {
 					:
 					null
 					}
-		        </div>
+		        </section>
 		)
 	}
 
