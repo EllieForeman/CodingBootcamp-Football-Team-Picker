@@ -34,6 +34,10 @@ Use React-Reux.
 
 #### Challenges
 
+**Different shuffle methods:**
+- fisher yates method?
+- problem with immutable arrays?
+
 **Sorting players by skill: question of UX regarding ratings:**
 
 1) *numerical rating* 
